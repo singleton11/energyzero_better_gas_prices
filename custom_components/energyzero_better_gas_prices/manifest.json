@@ -1,0 +1,11 @@
+{
+  "domain": "energyzero_better_gas_prices",
+  "name": "EnergyZero Better Gas Prices",
+  "codeowners": ["@singleton11"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/energyzero_better_gas_prices",
+  "iot_class": "cloud_polling",
+  "quality_scale": "bronze",
+  "requirements": ["aiohttp>=3.8.0"]
+}
