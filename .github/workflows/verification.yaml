@@ -1,0 +1,9 @@
+on: push
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: HACS Verification
+        uses: hacs/action@22.5.0
+        with:
+          category: 'integration'
