@@ -7,5 +7,6 @@
   "documentation": "https://www.home-assistant.io/integrations/energyzero_better_gas_prices",
   "iot_class": "cloud_polling",
   "quality_scale": "bronze",
-  "requirements": ["aiohttp>=3.8.0"]
+  "requirements": ["aiohttp>=3.8.0"],
+  "issue_tracker": "https://github.com/users/singleton11/projects/2"
 }
