@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from homeassistant.components.sensor import SensorEntity
+from homeassistant.components.sensor import SensorEntity, SensorStateClass
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
@@ -70,6 +70,10 @@ class EnergyZeroBetterGasPriceBaseSensor(
         self._sensor_type = sensor_type  # "market", "energy_tax", "purchase", "total"
         self._attr_name = f"Better Gas {name_suffix}"
         self._attr_unique_id = f"{DOMAIN}_{period}_{sensor_type}_gas_price"
+        # Tomorrow's price is a forecast, not a measurement of the current price.
+        self._attr_state_class = (
+            SensorStateClass.MEASUREMENT if period == "current" else None
+        )
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:

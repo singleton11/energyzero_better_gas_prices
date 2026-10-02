@@ -15,6 +15,15 @@ The handful for every time perios is:
 - energy tax
 - total
 
+## Price history
+
+The four current-day price sensors provide Home Assistant long-term statistics (hourly
+minimum, maximum, and mean), so their history can remain visible after the recorder
+purges detailed states. The next-day sensors are forecasts and do not provide
+long-term statistics. Previously purged history cannot be recovered by installing
+this update; statistics are collected from new readings onward. Home Assistant's
+recorder must be enabled and must not exclude these sensors.
+
 ## Installation
 
 - Add custom repository to your HACS: https://github.com/singleton11/enegryzero_better_gas_prices
